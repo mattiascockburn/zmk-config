@@ -3,11 +3,20 @@
 
 / {
     behaviors {
+        pht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1>;    // <---[[the W key]]
+        };
         td_c_esc_gr: tap_dance_ctrl_esc_grave {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_CTRL_ESC_GRAVE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&td LCTRL ESC>, <&kp GRAVE>;
         };
         td_s: tapdance_sticky {
