@@ -8,6 +8,14 @@
             mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_RSFT)>;
         };
+        dqt_sqt: double_quote_single_quote {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOUBLE_QUOTE_SINGLE_QUOTE";
+            #binding-cells = <0>;
+            bindings = <&kp DQT>, <&kp SQT>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
         msfs_mix_dn: msfs_mix_down_lean {
             compatible = "zmk,behavior-mod-morph";
             label = "MSFS_MIXTURE_DOWN_OR_LEAN";

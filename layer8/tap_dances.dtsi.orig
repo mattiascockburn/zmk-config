@@ -1,0 +1,120 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+<<<<<<< Updated upstream
+    behaviors {
+        pht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1>;    // <---[[the W key]]
+        };
+        td_c_esc_gr: tap_dance_ctrl_esc_grave {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CTRL_ESC_GRAVE";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&td LCTRL ESC>, <&kp GRAVE>;
+        };
+        td_s: tapdance_sticky {
+              compatible = "zmk,behavior-hold-tap";
+              label = "TAPDANCE_STICKY";
+              #binding-cells = <2>;
+              tapping-term-ms = <TAPPING_TERM>;
+              quick_tap_ms = <0>;
+              flavor = "tap-preferred";
+              bindings = <&sk>, <&kp>;
+        };
+        td: tapdance {
+              compatible = "zmk,behavior-hold-tap";
+              label = "TAPDANCE";
+              #binding-cells = <2>;
+              tapping-term-ms = <TAPPING_TERM>;
+              quick_tap_ms = <0>;
+              flavor = "tap-preferred";
+              bindings = <&kp>, <&kp>;
+        };
+        td_mt: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_MOD_TAP";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LSHIFT CAPSLOCK>, <&kp LCTRL>;
+        };
+      };
+||||||| Stash base
+    behaviors {
+        td_c_esc_gr: tap_dance_ctrl_esc_grave {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CTRL_ESC_GRAVE";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&td LCTRL ESC>, <&kp GRAVE>;
+        };
+        td_s: tapdance_sticky {
+              compatible = "zmk,behavior-hold-tap";
+              label = "TAPDANCE_STICKY";
+              #binding-cells = <2>;
+              tapping-term-ms = <TAPPING_TERM>;
+              quick_tap_ms = <0>;
+              flavor = "tap-preferred";
+              bindings = <&sk>, <&kp>;
+        };
+        td: tapdance {
+              compatible = "zmk,behavior-hold-tap";
+              label = "TAPDANCE";
+              #binding-cells = <2>;
+              tapping-term-ms = <TAPPING_TERM>;
+              quick_tap_ms = <0>;
+              flavor = "tap-preferred";
+              bindings = <&kp>, <&kp>;
+        };
+        td_mt: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_MOD_TAP";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LSHIFT CAPSLOCK>, <&kp LCTRL>;
+        };
+      };
+=======
+  behaviors {
+    td_c_esc_gr: tap_dance_ctrl_esc_grave {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_CTRL_ESC_GRAVE";
+      #binding-cells = <0>;
+      tapping-term-ms = <TAPPING_TERM>;
+      bindings = <&td LCTRL ESC>, <&kp GRAVE>;
+    };
+    td_s: tapdance_sticky {
+      compatible = "zmk,behavior-hold-tap";
+      label = "TAPDANCE_STICKY";
+      #binding-cells = <2>;
+      tapping-term-ms = <TAPPING_TERM>;
+      quick_tap_ms = <0>;
+      flavor = "tap-preferred";
+      bindings = <&sk>, <&kp>;
+    };
+    td: tapdance {
+      compatible = "zmk,behavior-hold-tap";
+      label = "TAPDANCE";
+      #binding-cells = <2>;
+      tapping-term-ms = <TAPPING_TERM>;
+      quick_tap_ms = <0>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
+    td_mt: tap_dance_mod_tap {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_MOD_TAP";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&mt LSHIFT CAPSLOCK>, <&kp LCTRL>;
+    };
+  };
+>>>>>>> Stashed changes
+};

@@ -37,20 +37,20 @@
 
         keymap {
                 compatible = "zmk,keymap";
+                qwerty_layer {
+                        bindings = <
+                                &td ESC Q       &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P
+                                LGUI_A          LALT_S          &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           RALT_L          &td SEMICOLON SQT
+                                &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         AD_FSLH
+                                                                &ctrl_alt_del   &sk LSHFT       &td LCTRL ENTER       &td TAB SPACE   TO_SYMBOL       &kp C_MUTE
+                        >;
+                        sensor-bindings = <&inc_dec_kp LA(F) LA(B) &inc_dec_kp DEL BSPC>;
+                };
                 colemak_layer {
                         bindings = <
                                 &td ESC Q       &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           &kp BSPC
                                 LGUI_A          LALT_R          &kp S           &kp T           &kp G           &kp M           &kp N           &kp E           RALT_I          RGUI_O
                                 &kp Z           &kp X           &kp C           &kp D           &kp V           &kp K           &kp H           &td MINUS COMMA &td EXCL DOT    AD_FSLH
-                                                                &ctrl_alt_del   &sk LSHFT       &td LCTRL ENTER       &td TAB SPACE   TO_SYMBOL       &kp C_MUTE
-                        >;
-                        sensor-bindings = <&inc_dec_kp LA(F) LA(B) &inc_dec_kp DEL BSPC>;
-                };
-                qwerty_layer {
-                        bindings = <
-                                &td ESC Q       &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P
-                                LGUI_A          LALT_S          &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           RALT_L          RGUI_QT
-                                &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         AD_FSLH
                                                                 &ctrl_alt_del   &sk LSHFT       &td LCTRL ENTER       &td TAB SPACE   TO_SYMBOL       &kp C_MUTE
                         >;
                         sensor-bindings = <&inc_dec_kp LA(F) LA(B) &inc_dec_kp DEL BSPC>;

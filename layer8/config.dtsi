@@ -10,14 +10,15 @@
 #endif
 
 #ifdef ROLLOW
-#define COLEMAK 0
-#define QWERTY  1
+#define QWERTY  0
+#define COLEMAK 1
 #define GAMING  2
 #define SYMBOL  3
 #define NUMBER  4
 #define NAVI    5
-#define FUNC    6
-#define ADJUST  7
+#define MOUSE   6
+#define FUNC    7
+#define ADJUST  8
 #endif
 
 //Basic Key Aliases
@@ -45,6 +46,7 @@
 #define TO_SYMBOL &to SYMBOL
 #define TO_NUMBER &to NUMBER
 #define TO_NAV &to NAVI
+#define TO_MOUSE &to MOUSE
 #define TO_ADJUST &to ADJUST
 #define TO_FUNC &to FUNC
 #endif
