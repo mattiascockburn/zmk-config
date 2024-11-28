@@ -1,29 +1,11 @@
 manifest:
   remotes:
-    # - name: zmkfirmware
-    #   url-base: https://github.com/zmkfirmware
-    #- name: barbellboards
-    #  url-base: https://github.com/barbellboards
-    #- name: infused-kim
-    #  url-base: https://github.com/infused-kim
-    - name: nickconway
-      url-base: https://github.com/nickconway
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
   projects:
-    #- name: zmk
-    #  remote: zmkfirmware
-    #  revision: main
-    #  import: app/west.yml
-    #- name: zmk
-    #  remote: infused-kim
-    #  revision: my-changes/oled-ext-pwr
-    #  import: app/west.yml
-    #- name: Rollow-ZMK
-    #  remote: barbellboards
-    #  revision: sofle
-    #  import: app/west.yml
     - name: zmk
-      remote: nickconway
-      revision: dev
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config
